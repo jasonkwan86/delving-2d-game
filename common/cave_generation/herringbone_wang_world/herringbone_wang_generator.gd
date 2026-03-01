@@ -12,12 +12,12 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		get_tree().reload_current_scene()
 
-func generate_herringbone_map(_width = 12, _height = 8) -> void:
+func generate_herringbone_map(width = 20, height = 20) -> void:
 	tilemap.clear()
-	herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2.ZERO, Vector2.ZERO, tilemap)
-	#herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2.RIGHT, Vector2.RIGHT * 2, tilemap)
-	#herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2.RIGHT, Vector2.RIGHT * 2, tilemap)
-	herringbone_wang_data_set.copy_hbwt_vertical_to_tile_map_layer(Vector2.RIGHT, Vector2.DOWN, tilemap)
-	#for col in range(5):
-		#print(col * Vector2.RIGHT)
-		#herringbone_wang_data_set.copy_random_hbw_tile_to_tile_map_layer(col * Vector2.RIGHT, tilemap)
+	for row in height:
+		for col in range(0, width, 4):
+			_place_dual_corner_tiles(row, col + row)
+
+func _place_dual_corner_tiles(row: int, col: int) -> void:
+	herringbone_wang_data_set.copy_random_hbwt_horizontal_to_tile_map_layer(col * Vector2i.RIGHT + row * Vector2i.DOWN, tilemap)
+	herringbone_wang_data_set.copy_random_hbwt_vertical_to_tile_map_layer((col + 2) * Vector2i.RIGHT + Vector2i.UP + row * Vector2i.DOWN, tilemap)
