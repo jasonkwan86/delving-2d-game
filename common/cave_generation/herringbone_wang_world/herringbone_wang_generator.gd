@@ -8,9 +8,9 @@ func _ready():
 	randomize()
 	generate_herringbone_map()
 
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		get_tree().reload_current_scene()
+#func _input(event):
+	#if event.is_action_pressed("ui_accept"):
+		#get_tree().reload_current_scene()
 
 func generate_herringbone_map(width = 20, height = 20) -> void:
 	for row in height:

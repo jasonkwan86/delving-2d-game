@@ -9,9 +9,11 @@ tile_data = PackedInt32Array(0, 65538, 0, 65536, 65538, 0, 131072, 65538, 0, 196
 texture = ExtResource("3_7o6cf")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 1:0/0 = 0
 
 [resource]
 tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s2ss1")
 pattern_0 = SubResource("TileMapPattern_83qch")

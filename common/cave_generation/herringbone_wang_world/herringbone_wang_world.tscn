@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://7t1kynosmdoc" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_generator.gd" id="1_vjbjw"]
 [ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="3_q1fur"]
 [ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
+[ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="4_qvtq8"]
 
 [node name="HerringboneWangWorld" type="Node2D" unique_id=1066884716 node_paths=PackedStringArray("tilemap", "herringbone_wang_data_set")]
 script = ExtResource("1_vjbjw")
@@ -14,3 +15,6 @@ tile_set = ExtResource("3_q1fur")
 
 [node name="HerringboneWangDataSet" parent="." unique_id=1122172486 instance=ExtResource("3_qvtq8")]
 visible = false
+
+[node name="Player" parent="." unique_id=1996790677 instance=ExtResource("4_qvtq8")]
+position = Vector2(134, -28)
