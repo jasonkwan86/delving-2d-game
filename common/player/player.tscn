@@ -6,6 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i15vv"]
 size = Vector2(4, 4)
 
+[sub_resource type="Gradient" id="Gradient_qvtq8"]
+offsets = PackedFloat32Array(0.16494845, 0.73883164)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i15vv"]
+gradient = SubResource("Gradient_qvtq8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Player" type="CharacterBody2D" unique_id=1996790677]
 script = ExtResource("1_dsdjy")
 
@@ -19,3 +28,9 @@ texture = ExtResource("2_i15vv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810004156]
 zoom = Vector2(5.34, 5.34)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1220633242]
+color = Color(1, 0.9529412, 0.9529412, 1)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_i15vv")
+texture_scale = 2.0

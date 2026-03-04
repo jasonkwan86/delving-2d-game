@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bj1h1dssiqoh8"]
+
+[ext_resource type="Texture2D" uid="uid://diqopejuli7pd" path="res://common/test_cave/cave_background.png" id="1_axjog"]
+
+[node name="CaveParallax" type="Parallax2D" unique_id=276027953]
+scroll_offset = Vector2(0, 230.145)
+repeat_size = Vector2(640, 250)
+repeat_times = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=540742162]
+texture = ExtResource("1_axjog")
