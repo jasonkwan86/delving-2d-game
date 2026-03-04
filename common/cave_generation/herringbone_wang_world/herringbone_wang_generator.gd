@@ -3,11 +3,11 @@ extends Node
 
 @export var tilemap: TileMapLayer 
 @export var herringbone_wang_data_set: HerringboneWangDataSet 
+@export var torch_scene: PackedScene
 
 func _ready():
 	randomize()
 	generate_herringbone_map()
-
 #func _input(event):
 	#if event.is_action_pressed("ui_accept"):
 		#get_tree().reload_current_scene()
@@ -26,3 +26,17 @@ func generate_herringbone_map(width = 20, height = 20) -> void:
 func _place_dual_corner_tiles(row: int, col: int) -> void:
 	herringbone_wang_data_set.copy_random_hbwt_horizontal_to_tile_map_layer(col * Vector2i.RIGHT + row * Vector2i.DOWN, tilemap)
 	herringbone_wang_data_set.copy_random_hbwt_vertical_to_tile_map_layer((col + 2) * Vector2i.RIGHT + Vector2i.UP + row * Vector2i.DOWN, tilemap)
+	
+	#random torch generator
+	if torch_scene != null and randf() < 0.02: # 2% chance per placement
+		var torch := torch_scene.instantiate()
+		add_child(torch)
+
+		# randomly choose one of the two placement cells
+		var chosen_cell := (
+			col * Vector2i.RIGHT + row * Vector2i.DOWN
+			if randi() % 2 == 0
+			else (col + 2) * Vector2i.RIGHT + Vector2i.UP + row * Vector2i.DOWN
+		)
+
+		torch.position = tilemap.map_to_local(chosen_cell) + Vector2(0, -10)
