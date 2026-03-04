@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bsrdjaotq20ip"]
 
-[ext_resource type="Texture2D" uid="uid://bu4ollmldnx7i" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_palette.png" id="1_60vy2"]
-[ext_resource type="Script" uid="uid://cgv4sc5urntxi" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.gd" id="2_66i15"]
+[ext_resource type="Texture2D" uid="uid://bu4ollmldnx7i" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_palette.png" id="1_60vy2"]
+[ext_resource type="Script" uid="uid://cgv4sc5urntxi" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.gd" id="2_66i15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6wgki"]
 texture = ExtResource("1_60vy2")

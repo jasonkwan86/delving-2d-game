@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj1h1dssiqoh8"]
 
-[ext_resource type="Texture2D" uid="uid://diqopejuli7pd" path="res://common/test_cave/cave_background.png" id="1_axjog"]
+[ext_resource type="Texture2D" uid="uid://diqopejuli7pd" path="res://common/world_levels/test_cave/cave_background.png" id="1_axjog"]
 
 [node name="CaveParallax" type="Parallax2D" unique_id=276027953]
 scroll_offset = Vector2(0, 230.145)

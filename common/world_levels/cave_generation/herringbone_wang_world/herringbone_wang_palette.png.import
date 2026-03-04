@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu4ollmldnx7i"
-path="res://.godot/imported/herringbone_wang_palette.png-6886daf6d7f38da916f9fd191d340625.ctex"
+path="res://.godot/imported/herringbone_wang_palette.png-8e0c40c4980dd455b190ce7653eeffce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://common/cave_generation/herringbone_wang_world/herringbone_wang_palette.png"
-dest_files=["res://.godot/imported/herringbone_wang_palette.png-6886daf6d7f38da916f9fd191d340625.ctex"]
+source_file="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_palette.png"
+dest_files=["res://.godot/imported/herringbone_wang_palette.png-8e0c40c4980dd455b190ce7653eeffce.ctex"]
 
 [params]
 

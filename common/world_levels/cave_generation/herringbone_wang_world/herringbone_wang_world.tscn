@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bfc7ewsvfemfx"]
 
-[ext_resource type="Script" uid="uid://7t1kynosmdoc" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_generator.gd" id="1_vjbjw"]
+[ext_resource type="Script" uid="uid://7t1kynosmdoc" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_generator.gd" id="1_vjbjw"]
 [ext_resource type="PackedScene" uid="uid://bj1h1dssiqoh8" path="res://common/background_parallax/cave_parallax.tscn" id="2_gkpqh"]
-[ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="3_q1fur"]
-[ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
+[ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="3_q1fur"]
+[ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="4_qvtq8"]
 
 [sub_resource type="Gradient" id="Gradient_qvtq8"]
