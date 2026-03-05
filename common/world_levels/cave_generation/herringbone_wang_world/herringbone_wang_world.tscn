@@ -5,6 +5,7 @@
 [ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="3_q1fur"]
 [ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="4_qvtq8"]
+[ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy.tscn" id="6_sexm6"]
 
 [sub_resource type="Gradient" id="Gradient_qvtq8"]
 offsets = PackedFloat32Array(0.16494845, 0.73883164)
@@ -21,6 +22,7 @@ tilemap = NodePath("TileMapLayer")
 herringbone_wang_data_set = NodePath("HerringboneWangDataSet")
 
 [node name="CaveParallax" parent="." unique_id=276027953 instance=ExtResource("2_gkpqh")]
+scroll_offset = Vector2(55, -24)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=443311247]
 color = Color(0, 0, 0, 1)
@@ -37,8 +39,12 @@ visible = false
 position = Vector2(134, -28)
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=484586810]
-position = Vector2(0, -15)
+position = Vector2(0, -2)
 color = Color(1.347661e-06, 0.9522832, 0.9522832, 1)
 energy = 3.0
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_gkpqh")
+
+[node name="Enemy" parent="." unique_id=1519862877 instance=ExtResource("6_sexm6")]
+position = Vector2(195, -57)
+scale = Vector2(0.5, 0.5)
