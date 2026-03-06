@@ -5,7 +5,7 @@
 [node name="CaveParallax" type="Parallax2D" unique_id=276027953]
 scroll_offset = Vector2(0, 230.145)
 repeat_size = Vector2(640, 250)
-repeat_times = 7
+repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540742162]
 texture = ExtResource("1_axjog")

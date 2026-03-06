@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="3_q1fur"]
 [ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="4_qvtq8"]
-[ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy.tscn" id="6_sexm6"]
+[ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy/enemy.tscn" id="6_sexm6"]
 
 [sub_resource type="Gradient" id="Gradient_qvtq8"]
 offsets = PackedFloat32Array(0.16494845, 0.73883164)
