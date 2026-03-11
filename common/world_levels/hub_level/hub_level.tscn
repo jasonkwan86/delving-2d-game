@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="2_kdh4p"]
 [ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy/enemy.tscn" id="4_8si23"]
 [ext_resource type="PackedScene" uid="uid://b0sqws80huxfo" path="res://common/placeable_items/torch/torch.tscn" id="5_bt4wu"]
+[ext_resource type="PackedScene" path="res://common/placeable_items/mine_warning_sign.tscn" id="6_mine_warning"]
+[ext_resource type="PackedScene" path="res://common/placeable_items/abandoned_camp_props.tscn" id="7_abandoned_camp"]
+[ext_resource type="PackedScene" path="res://common/placeable_items/collapsed_tunnel_props.tscn" id="8_collapsed_tunnel"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kdh4p"]
 
@@ -36,8 +39,18 @@ position = Vector2(557, 594)
 [node name="Torch5" parent="PlaceableItems" unique_id=2045274886 instance=ExtResource("5_bt4wu")]
 position = Vector2(666, 759)
 
+[node name="MineWarningSign" parent="PlaceableItems" unique_id=1766204530 instance=ExtResource("6_mine_warning")]
+position = Vector2(430, 360)
+
+[node name="AbandonedCampProps" parent="PlaceableItems" unique_id=1333389587 instance=ExtResource("7_abandoned_camp")]
+position = Vector2(314.00003, 387.00003)
+rotation = -0.4712389
+
+[node name="CollapsedTunnelProps" parent="PlaceableItems" unique_id=32710305 instance=ExtResource("8_collapsed_tunnel")]
+position = Vector2(700, 340)
+
 [node name="Player" parent="." unique_id=1996790677 instance=ExtResource("2_kdh4p")]
-position = Vector2(270, 384)
+position = Vector2(266, 383)
 
 [node name="LeftWorldCollider" type="StaticBody2D" parent="." unique_id=644882532]
 

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://mine_warning_sign_r6q0"]
+
+[ext_resource type="PackedScene" uid="uid://b0sqws80huxfo" path="res://common/placeable_items/torch/torch.tscn" id="1_torch_scene"]
+
+[node name="MineWarningSign" type="Node2D"]
+
+[node name="EntranceTorchLeft" parent="." instance=ExtResource("1_torch_scene")]
+position = Vector2(-24, 0)
+
+[node name="EntranceTorchRight" parent="." instance=ExtResource("1_torch_scene")]
+position = Vector2(24, 0)
+
