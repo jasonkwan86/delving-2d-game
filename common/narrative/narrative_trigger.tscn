@@ -6,6 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dqnq"]
 size = Vector2(40, 48)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifbo5"]
+bg_color = Color(0.19854477, 0.20966125, 0.22803518, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifbo5"]
+
 [sub_resource type="Gradient" id="Gradient_ifbo5"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fhb0r"]
@@ -19,24 +29,34 @@ shape = SubResource("RectangleShape2D_2dqnq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517887537]
 position = Vector2(0, 24)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_ifbo5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1391609776]
+visible = false
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=810268003]
-offset_left = -150.0
-offset_top = -120.0
-offset_right = 150.0
-offset_bottom = -60.0
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=545248904]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifbo5")
 
-[node name="DialogueLabel" type="Label" parent="CanvasLayer/Panel" unique_id=579279714]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Looks like someone has explored here before,		
-but didn't get very far..."
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=326549427]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Looks like someone has explored here before, but didn't get very far..."
+label_settings = SubResource("LabelSettings_ifbo5")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=397037788]
