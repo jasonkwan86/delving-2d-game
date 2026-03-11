@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ev3pgv74pfam"]
+
+[ext_resource type="Script" uid="uid://rgnd6xdgtua7" path="res://common/narrative/narrative_trigger.gd" id="1_k5hdm"]
+[ext_resource type="Texture2D" uid="uid://bo84d53yt2pu8" path="res://common/narrative/dead_skeleton.png" id="2_ifbo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dqnq"]
+size = Vector2(40, 48)
+
+[sub_resource type="Gradient" id="Gradient_ifbo5"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fhb0r"]
+gradient = SubResource("Gradient_ifbo5")
+
+[node name="NarrativeTrigger" type="Area2D" unique_id=1703509376]
+script = ExtResource("1_k5hdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1344219419]
+shape = SubResource("RectangleShape2D_2dqnq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517887537]
+position = Vector2(0, 24)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ifbo5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1391609776]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=810268003]
+offset_left = -150.0
+offset_top = -120.0
+offset_right = 150.0
+offset_bottom = -60.0
+
+[node name="DialogueLabel" type="Label" parent="CanvasLayer/Panel" unique_id=579279714]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Looks like someone has explored here before,		
+but didn't get very far..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=397037788]
+position = Vector2(0, -20)
+energy = 1.5
+texture = SubResource("GradientTexture2D_fhb0r")

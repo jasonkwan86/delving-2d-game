@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="2_kdh4p"]
 [ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy/enemy.tscn" id="4_8si23"]
 [ext_resource type="PackedScene" uid="uid://b0sqws80huxfo" path="res://common/placeable_items/torch/torch.tscn" id="5_bt4wu"]
+[ext_resource type="PackedScene" uid="uid://ev3pgv74pfam" path="res://common/narrative/narrative_trigger.tscn" id="6_7hbfh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kdh4p"]
 
@@ -51,3 +52,6 @@ shadow_enabled = true
 
 [node name="Enemy" parent="." unique_id=1519862877 instance=ExtResource("4_8si23")]
 position = Vector2(105, 359)
+
+[node name="NarrativeTrigger" parent="." unique_id=1703509376 instance=ExtResource("6_7hbfh")]
+position = Vector2(463, 300)
