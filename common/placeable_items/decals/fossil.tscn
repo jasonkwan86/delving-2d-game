@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b7xihfhyt4ypn"]
+
+[ext_resource type="Texture2D" uid="uid://d2uswbjr3coru" path="res://common/placeable_items/decals/F2080.png" id="1_2bfdi"]
+[ext_resource type="Texture2D" uid="uid://btwa0ery3ah8w" path="res://common/placeable_items/decals/F2080-1.png" id="2_0nn1b"]
+[ext_resource type="Texture2D" uid="uid://cj1olqkcpvehx" path="res://common/placeable_items/decals/F2080-2.png" id="3_mhu22"]
+[ext_resource type="Texture2D" uid="uid://by7ta3gqi5chk" path="res://common/placeable_items/decals/F2080-3.png" id="4_7kaoa"]
+[ext_resource type="Texture2D" uid="uid://bnd6rb5sst5r6" path="res://common/placeable_items/decals/F2080-4.png" id="5_keuow"]
+[ext_resource type="Texture2D" uid="uid://df3g2y1s6desc" path="res://common/placeable_items/decals/F2080-5.png" id="6_m3b17"]
+[ext_resource type="Texture2D" uid="uid://b3d1lumjw2jnf" path="res://common/placeable_items/decals/F2080-6.png" id="7_71ei6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4ggc"]
+atlas = ExtResource("1_2bfdi")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg1u0"]
+atlas = ExtResource("2_0nn1b")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lsd7"]
+atlas = ExtResource("3_mhu22")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rep2g"]
+atlas = ExtResource("4_7kaoa")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjbic"]
+atlas = ExtResource("5_keuow")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pnar"]
+atlas = ExtResource("6_m3b17")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4eyi"]
+atlas = ExtResource("7_71ei6")
+region = Rect2(0, 256, 512, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqefg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4ggc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg1u0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lsd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rep2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjbic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pnar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4eyi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="fossil" type="AnimatedSprite2D" unique_id=610246147]
+position = Vector2(0.99999905, -4.7683716e-07)
+scale = Vector2(0.10156249, 0.10156249)
+sprite_frames = SubResource("SpriteFrames_pqefg")
+autoplay = "default"
+frame_progress = 0.2362931
