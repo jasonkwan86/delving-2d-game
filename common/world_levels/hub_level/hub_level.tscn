@@ -4,13 +4,16 @@
 [ext_resource type="TileSet" uid="uid://bgx62rm03q2n3" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_tile_set.tres" id="1_uw4t4"]
 [ext_resource type="PackedScene" uid="uid://bj1h1dssiqoh8" path="res://common/background_parallax/cave_parallax.tscn" id="2_gt1kj"]
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="2_kdh4p"]
+[ext_resource type="PackedScene" uid="uid://bmr1afplps31e" path="res://common/placeable_items/loot/gem.tscn" id="3_ukytc"]
 [ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy/enemy.tscn" id="4_8si23"]
 [ext_resource type="Script" uid="uid://7t1kynosmdoc" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_generator.gd" id="4_u3q5b"]
 [ext_resource type="PackedScene" uid="uid://b0sqws80huxfo" path="res://common/placeable_items/torch/torch.tscn" id="5_bt4wu"]
 [ext_resource type="PackedScene" uid="uid://ev3pgv74pfam" path="res://common/narrative/narrative_trigger.tscn" id="6_7hbfh"]
 [ext_resource type="PackedScene" path="res://common/placeable_items/mine_warning_sign.tscn" id="6_mine_warning"]
 [ext_resource type="PackedScene" path="res://common/placeable_items/abandoned_camp_props.tscn" id="7_abandoned_camp"]
+[ext_resource type="PackedScene" uid="uid://b7xihfhyt4ypn" path="res://common/placeable_items/decals/fossil.tscn" id="8_28u71"]
 [ext_resource type="PackedScene" path="res://common/placeable_items/collapsed_tunnel_props.tscn" id="8_collapsed_tunnel"]
+[ext_resource type="PackedScene" uid="uid://0f4ei6q31sco" path="res://common/placeable_items/decals/campfire.tscn" id="10_ju3r0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kdh4p"]
 
@@ -33,6 +36,9 @@ tilemap = NodePath(".")
 herringbone_wang_data_set = NodePath("../HerringboneWangDataSet")
 
 [node name="PlaceableItems" type="Node2D" parent="." unique_id=1552737615]
+
+[node name="gem" parent="PlaceableItems" unique_id=573383905 instance=ExtResource("3_ukytc")]
+position = Vector2(527, 467)
 
 [node name="Torch" parent="PlaceableItems" unique_id=1988714964 instance=ExtResource("5_bt4wu")]
 position = Vector2(545, 350)
@@ -58,6 +64,9 @@ rotation = -0.4712389
 
 [node name="CollapsedTunnelProps" parent="PlaceableItems" unique_id=32710305 instance=ExtResource("8_collapsed_tunnel")]
 position = Vector2(700, 340)
+
+[node name="fossil" parent="PlaceableItems" unique_id=610246147 instance=ExtResource("8_28u71")]
+position = Vector2(629, 500)
 
 [node name="Player" parent="." unique_id=1996790677 instance=ExtResource("2_kdh4p")]
 position = Vector2(270, 423)

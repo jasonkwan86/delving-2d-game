@@ -33,4 +33,4 @@ zoom = Vector2(5.34, 5.34)
 color = Color(1, 0.9529412, 0.9529412, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_i15vv")
-texture_scale = 2.0
+texture_scale = 1.3
