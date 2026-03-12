@@ -63,5 +63,5 @@ shadow_enabled = true
 position = Vector2(105, 404)
 
 [node name="NarrativeTrigger" parent="." unique_id=1703509376 instance=ExtResource("6_7hbfh")]
-position = Vector2(571, 325.00003)
+position = Vector2(599, 377.00003)
 rotation = 1.1249343
