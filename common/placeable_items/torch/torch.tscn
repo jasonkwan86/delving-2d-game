@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0sqws80huxfo"]
 
-[ext_resource type="Script" uid="uid://movwk8rymvkv" path="res://common/placeable_items/torch/point_light_2d.gd" id="1_7nsaw"]
+[ext_resource type="Script" path="res://common/placeable_items/torch/point_light_2d.gd" id="1_7nsaw"]
 [ext_resource type="Texture2D" uid="uid://bdtce2kcjktwv" path="res://common/placeable_items/torch/torch.png" id="1_45dsy"]
 [ext_resource type="Texture2D" uid="uid://eovwnk53c1pi" path="res://common/placeable_items/torch/torches.png" id="3_8g137"]
 
