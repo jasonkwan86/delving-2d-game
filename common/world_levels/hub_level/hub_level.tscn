@@ -22,7 +22,6 @@
 [node name="CaveParallax" parent="." unique_id=276027953 instance=ExtResource("2_gt1kj")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2145797918]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="HerringboneWangDataSet" parent="." unique_id=1122172486 instance=ExtResource("1_hdv7u")]
@@ -38,7 +37,7 @@ herringbone_wang_data_set = NodePath("../HerringboneWangDataSet")
 [node name="PlaceableItems" type="Node2D" parent="." unique_id=1552737615]
 
 [node name="gem" parent="PlaceableItems" unique_id=573383905 instance=ExtResource("3_ukytc")]
-position = Vector2(527, 467)
+position = Vector2(574, 511)
 
 [node name="Torch" parent="PlaceableItems" unique_id=1988714964 instance=ExtResource("5_bt4wu")]
 position = Vector2(545, 350)
@@ -56,17 +55,17 @@ position = Vector2(557, 611)
 position = Vector2(576, 754)
 
 [node name="MineWarningSign" parent="PlaceableItems" unique_id=1766204530 instance=ExtResource("6_mine_warning")]
-position = Vector2(430, 360)
+position = Vector2(450, 355)
 
 [node name="AbandonedCampProps" parent="PlaceableItems" unique_id=1333389587 instance=ExtResource("7_abandoned_camp")]
-position = Vector2(314.00003, 387.00003)
+position = Vector2(360, 418)
 rotation = -0.4712389
 
 [node name="CollapsedTunnelProps" parent="PlaceableItems" unique_id=32710305 instance=ExtResource("8_collapsed_tunnel")]
 position = Vector2(700, 340)
 
 [node name="fossil" parent="PlaceableItems" unique_id=610246147 instance=ExtResource("8_28u71")]
-position = Vector2(629, 500)
+position = Vector2(672.99994, 548)
 
 [node name="Player" parent="." unique_id=1996790677 instance=ExtResource("2_kdh4p")]
 position = Vector2(270, 423)
