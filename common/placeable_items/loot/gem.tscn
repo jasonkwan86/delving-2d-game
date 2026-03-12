@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmr1afplps31e"]
 
-[ext_resource type="Script" uid="uid://wgk8i0gfcr44" path="res://common/placeable_items/loot/point_light_2d.gd" id="1_i1nkl"]
+[ext_resource type="Script" uid="uid://wgk8i0gfcr44" path="res://common/placeable_items/loot/gem_point_light_2d.gd" id="1_i1nkl"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uvinj"]
 load_path = "res://.godot/imported/gems_db16.png-65c9959878ade5bbfb164a9763af6e4f.ctex"
