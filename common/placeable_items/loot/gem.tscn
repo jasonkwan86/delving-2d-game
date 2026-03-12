@@ -31,6 +31,7 @@ shape = SubResource("CircleShape2D_ymksn")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1459090936]
 color = Color(0.26666668, 0.44313726, 0.7882353, 1)
 energy = 2.0
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_na61s")
 texture_scale = 3.0
 script = ExtResource("1_i1nkl")
