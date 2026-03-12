@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://abandoned_camp_props_9k3p"]
+
+[ext_resource type="PackedScene" uid="uid://b0sqws80huxfo" path="res://common/placeable_items/torch/torch.tscn" id="1_torch_scene"]
+
+[node name="AbandonedCampProps" type="Node2D"]
+
+[node name="CampTorchUpright" parent="." instance=ExtResource("1_torch_scene")]
+position = Vector2(-16, -4)
+
+[node name="CampTorchFallen" parent="." instance=ExtResource("1_torch_scene")]
+position = Vector2(16, 4)
+rotation = -0.6
+
