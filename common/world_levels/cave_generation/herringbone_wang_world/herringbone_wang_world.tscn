@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bsrdjaotq20ip" path="res://common/world_levels/cave_generation/herringbone_wang_world/herringbone_wang_data_set/herringbone_wang_data_set.tscn" id="3_qvtq8"]
 [ext_resource type="PackedScene" uid="uid://uuhxas338kco" path="res://common/player/player.tscn" id="4_qvtq8"]
 [ext_resource type="PackedScene" uid="uid://deqoubvx1x1nr" path="res://common/enemy/enemy.tscn" id="6_sexm6"]
+[ext_resource type="PackedScene" uid="uid://ev3pgv74pfam" path="res://common/narrative/narrative_trigger.tscn" id="7_7jk0g"]
 
 [sub_resource type="Gradient" id="Gradient_qvtq8"]
 offsets = PackedFloat32Array(0.16494845, 0.73883164)
@@ -48,3 +49,6 @@ texture = SubResource("GradientTexture2D_gkpqh")
 [node name="Enemy" parent="." unique_id=1519862877 instance=ExtResource("6_sexm6")]
 position = Vector2(195, -57)
 scale = Vector2(0.5, 0.5)
+
+[node name="NarrativeTrigger" parent="." unique_id=1703509376 instance=ExtResource("7_7jk0g")]
+position = Vector2(250, -28)
