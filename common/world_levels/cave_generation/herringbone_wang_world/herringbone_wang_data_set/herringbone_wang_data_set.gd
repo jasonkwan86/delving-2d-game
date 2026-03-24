@@ -38,6 +38,9 @@ func copy_hbwt_vertical_to_tile_map_layer(copy_from_hbwt_coords: Vector2i, copy_
 				_get_atlas_coord_of_vertical_hbwt_at(copy_from_hbwt_coords, row, col)
 			)
 
+func copy_horizontal_border_to_tile_map_layer(copy_to_hbwt_coords: Vector2i, copy_to_tile_map_layer: TileMapLayer):
+	copy_hbwt_horizontal_to_tile_map_layer(Vector2i(-2, -1), copy_to_hbwt_coords, copy_to_tile_map_layer)
+
 # TODO: Make this less rigid
 func _get_atlas_coord_of_horizontal_hbwt_at(hbwt_coords: Vector2i, row: int, col: int) -> Vector2i:
 	return get_cell_atlas_coords(hbwt_coords * HBW_HORIZONTAL_TILE_GAP + Vector2i(col, row))

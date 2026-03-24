@@ -1,16 +1,28 @@
 class_name HerringboneWangGenerator
-extends Node
+extends TileMapLayer
 
-@export var tilemap: TileMapLayer 
+@export var world_tilemap: TileMapLayer 
 @export var herringbone_wang_data_set: HerringboneWangDataSet 
 
 func _ready():
 	randomize()
-	generate_herringbone_map(Vector2i(-5, 5), Vector2i(20, 20))
+	generate_herringbone_map(Vector2i(-5, 5), Vector2i(20, 12))
 
 #func _input(event):
 	#if event.is_action_pressed("ui_accept"):
 		#get_tree().reload_current_scene()
+
+func generate_boss_arena() -> void:
+	herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2i(0, -2), Vector2i(3, 13), world_tilemap)
+
+func generate_world_borders(offset: Vector2i, dimensions: Vector2i) -> void:
+	for row in dimensions.y:
+		@warning_ignore("integer_division")
+		herringbone_wang_data_set.copy_horizontal_border_to_tile_map_layer(offset + Vector2i.DOWN * row + Vector2i.LEFT, world_tilemap)
+		herringbone_wang_data_set.copy_horizontal_border_to_tile_map_layer(offset + Vector2i.DOWN * row + Vector2i.RIGHT * (dimensions.x - 1), world_tilemap)
+	for col in dimensions.x:
+		#herringbone_wang_data_set.copy_horizontal_border_to_tile_map_layer(offset + Vector2i.RIGHT * col, world_tilemap)
+		herringbone_wang_data_set.copy_horizontal_border_to_tile_map_layer(offset + Vector2i.DOWN * (dimensions.y - 1) + Vector2i.RIGHT * col, world_tilemap)
 
 func generate_herringbone_map(offset: Vector2i = Vector2i(0, 0), dimensions: Vector2i = Vector2i(20, 20)) -> void:
 	for row in dimensions.y:
@@ -22,7 +34,9 @@ func generate_herringbone_map(offset: Vector2i = Vector2i(0, 0), dimensions: Vec
 			# First 3 sequential rows
 			for col in range(0, dimensions.x, 4):
 				_place_dual_corner_tiles(row + offset.y, col + row % 4 + offset.x)
+	generate_boss_arena()
+	generate_world_borders(offset, dimensions)
 
 func _place_dual_corner_tiles(row: int, col: int) -> void:
-	herringbone_wang_data_set.copy_random_hbwt_horizontal_to_tile_map_layer(col * Vector2i.RIGHT + row * Vector2i.DOWN, tilemap)
-	herringbone_wang_data_set.copy_random_hbwt_vertical_to_tile_map_layer((col + 2) * Vector2i.RIGHT + Vector2i.UP + row * Vector2i.DOWN, tilemap)
+	herringbone_wang_data_set.copy_random_hbwt_horizontal_to_tile_map_layer(col * Vector2i.RIGHT + row * Vector2i.DOWN, world_tilemap)
+	herringbone_wang_data_set.copy_random_hbwt_vertical_to_tile_map_layer((col + 2) * Vector2i.RIGHT + Vector2i.UP + row * Vector2i.DOWN, world_tilemap)
