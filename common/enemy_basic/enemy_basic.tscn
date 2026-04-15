@@ -351,6 +351,6 @@ script = ExtResource("1_7wuip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=904587927]
 sprite_frames = SubResource("SpriteFrames_3xq0i")
-animation = &"hit"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1387795286]

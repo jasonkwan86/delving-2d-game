@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 40.0
+const SPEED = 60.0
 const PATROL_DISTANCE = 1
 
 @export var tile_size: int = 16
@@ -19,29 +19,13 @@ var health: int
 var can_damage: bool = true
 var is_dead: bool = false
 
-#var health_bar: ProgressBar
-
 func _ready() -> void:
 	add_to_group("enemy")
 	patrol_limit = PATROL_DISTANCE * tile_size
 	health = max_health
 	anim.play("idle")
-	#_setup_health_bar()
 	health_bar.max_value = max_health
 	health_bar.value = health
-
-func _setup_health_bar():
-	var bar_container = Node2D.new()
-	bar_container.position = Vector2(-20, -30)
-	add_child(bar_container)
-
-	health_bar = ProgressBar.new()
-	health_bar.min_value = 0
-	health_bar.max_value = max_health
-	health_bar.value = health
-	health_bar.custom_minimum_size = Vector2(40, 6)
-	health_bar.show_percentage = false
-	bar_container.add_child(health_bar)
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -108,17 +92,6 @@ func die():
 	anim.play("death")
 	await anim.animation_finished
 	queue_free()
-
-#func _on_head_hitbox_body_entered(body):
-#	if is_dead:
-#		return
-
-#	if body.is_in_group("player"):
-#		if body.velocity.y > 0:  # player is falling
-#			take_damage(1)
-
-			# bounce player up
-#			body.velocity.y = -250
 
 
 func _on_head_hit_box_body_entered(body: Node2D) -> void:

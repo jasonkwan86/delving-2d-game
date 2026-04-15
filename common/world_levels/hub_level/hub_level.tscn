@@ -91,4 +91,7 @@ rotation = 1.1249343
 position = Vector2(253, 422)
 
 [node name="Enemy2" parent="." unique_id=1813327135 instance=ExtResource("4_8si23")]
-position = Vector2(767, 541)
+position = Vector2(771, 538)
+
+[node name="Enemy3" parent="." unique_id=1082301294 instance=ExtResource("4_8si23")]
+position = Vector2(530, 750)
