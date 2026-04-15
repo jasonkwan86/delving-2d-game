@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpyiftb8n3q2j" path="res://common/player/player.gd" id="1_dsdjy"]
 [ext_resource type="Texture2D" uid="uid://sif4hcr35nk7" path="res://common/player/knight.webp" id="2_i15vv"]
 [ext_resource type="Script" uid="uid://beonw6bqb3yxv" path="res://common/player/mining_component/mining_component.gd" id="3_f6svf"]
+[ext_resource type="Script" uid="uid://dphgb85wjttdy" path="res://common/player/inventory_component/inventory_component.gd" id="4_ujhar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i15vv"]
 size = Vector2(4, 4)
@@ -36,7 +37,12 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_i15vv")
 texture_scale = 1.3
 
-[node name="MiningComponent" type="Node2D" parent="." unique_id=1280949579 node_paths=PackedStringArray("player")]
+[node name="MiningComponent" type="Node2D" parent="." unique_id=1280949579 node_paths=PackedStringArray("player", "inventory")]
 script = ExtResource("3_f6svf")
 player = NodePath("..")
+inventory = NodePath("../InventoryComponent")
 metadata/_custom_type_script = "uid://beonw6bqb3yxv"
+
+[node name="InventoryComponent" type="Node" parent="." unique_id=350630303]
+script = ExtResource("4_ujhar")
+metadata/_custom_type_script = "uid://dphgb85wjttdy"

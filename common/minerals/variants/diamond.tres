@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Mineral" format=3 uid="uid://dv4bdukgspaps"]
+
+[ext_resource type="Script" uid="uid://cjofkpxugw51m" path="res://common/minerals/mineral.gd" id="1_47hl1"]
+
+[resource]
+script = ExtResource("1_47hl1")
+mineral_name = "Diamond"
+metadata/_custom_type_script = "uid://cjofkpxugw51m"

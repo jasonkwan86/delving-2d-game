@@ -3,6 +3,7 @@ extends Node2D
 
 @export_category("World Properties")
 @export var player: CharacterBody2D
+@export var inventory: InventoryComponent
 @export var world_tilemap: TileMapLayer
 @export var break_tilemap: TileMapLayer
 @export var block_break_states: int = 3
@@ -24,7 +25,8 @@ func mine(delta: float) -> void:
 	if world_tilemap.get_cell_source_id(cell_position) == -1:
 		return
 	
-	var max_health = world_tilemap.get_cell_tile_data(cell_position).get_custom_data("health")
+	var tile_data = world_tilemap.get_cell_tile_data(cell_position)
+	var max_health = tile_data.get_custom_data("health")
 	if cell_position not in cell_healths:
 		cell_healths[cell_position] = max_health
 	cell_healths[cell_position] -= mine_damage_per_second * delta
@@ -33,3 +35,6 @@ func mine(delta: float) -> void:
 	if cell_healths[cell_position] <= 0:
 		world_tilemap.erase_cell(cell_position)
 		break_tilemap.erase_cell(cell_position)
+		var mineral_type: Mineral = tile_data.get_custom_data("mineral_type")
+		if mineral_type != null:
+			inventory.add_mineral(mineral_type)

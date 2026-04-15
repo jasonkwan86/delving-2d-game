@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xihfhyt4ypn" path="res://common/placeable_items/decals/fossil.tscn" id="8_28u71"]
 [ext_resource type="PackedScene" path="res://common/placeable_items/collapsed_tunnel_props.tscn" id="8_collapsed_tunnel"]
 [ext_resource type="PackedScene" uid="uid://0f4ei6q31sco" path="res://common/placeable_items/decals/campfire.tscn" id="10_ju3r0"]
+[ext_resource type="Script" uid="uid://cjofkpxugw51m" path="res://common/minerals/mineral.gd" id="13_hfm7u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hfm7u"]
 texture = ExtResource("3_p7ycy")
@@ -89,6 +90,9 @@ position = Vector2(270, 423)
 [node name="MiningComponent" parent="Player" index="4" unique_id=1280949579 node_paths=PackedStringArray("world_tilemap", "break_tilemap")]
 world_tilemap = NodePath("../../WorldLayer")
 break_tilemap = NodePath("../../BreakLayer")
+
+[node name="InventoryComponent" parent="Player" index="5" unique_id=350630303]
+mineral_counts = Dictionary[ExtResource("13_hfm7u"), int]({})
 
 [node name="LeftWorldCollider" type="StaticBody2D" parent="." unique_id=644882532]
 
