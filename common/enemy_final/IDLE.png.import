@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ncouc4xabew"
-path="res://.godot/imported/Skeleton enemy.png-7079e417bf354e641a08a8a2101cb97d.ctex"
+uid="uid://b8bf3o36im16y"
+path="res://.godot/imported/IDLE.png-fa5758d2ad43df2c5266fabf0e231738.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://common/enemy_basic/Skeleton enemy.png"
-dest_files=["res://.godot/imported/Skeleton enemy.png-7079e417bf354e641a08a8a2101cb97d.ctex"]
+source_file="res://common/enemy_final/IDLE.png"
+dest_files=["res://.godot/imported/IDLE.png-fa5758d2ad43df2c5266fabf0e231738.ctex"]
 
 [params]
 

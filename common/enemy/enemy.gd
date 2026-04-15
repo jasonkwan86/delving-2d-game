@@ -102,5 +102,4 @@ func _on_head_hit_box_body_entered(body: Node2D) -> void:
 		if body.velocity.y > 0:
 			take_damage(1)
 
-			# bounce player up
 			body.velocity.y = -250
