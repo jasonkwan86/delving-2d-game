@@ -132,6 +132,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0.72959185, 0.72959185, 0.72959185, 1, 0, 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5fm6u"]
 gradient = SubResource("Gradient_qgo2n")
 
+[sub_resource type="Theme" id="Theme_qgo2n"]
+
 [node name="EnemyFinal" type="CharacterBody2D" unique_id=1545020129]
 script = ExtResource("1_spvse")
 
@@ -156,5 +158,9 @@ texture = SubResource("GradientTexture2D_5fm6u")
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=927930848]
 offset_right = 4.0
 offset_bottom = 27.0
+scale = Vector2(0.5, 0.5)
+theme = SubResource("Theme_qgo2n")
+theme_override_colors/font_color = Color(0.99999636, 0.9737049, 0.9699889, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="HeadHitBox" to="." method="_on_head_hit_box_body_entered"]
