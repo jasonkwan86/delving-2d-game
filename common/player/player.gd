@@ -128,3 +128,7 @@ func die():
 	label.set_anchors_preset(Control.PRESET_FULL_RECT)
 	label.add_theme_font_size_override("font_size", 48)
 	hud.add_child(label)
+	
+	await get_tree().create_timer(2.5).timeout
+	
+	get_tree().change_scene_to_file("res://common/main_menu/main_menu.tscn")
