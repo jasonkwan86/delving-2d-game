@@ -11,6 +11,8 @@ var has_double_jumped: bool = false
 @export var max_health: int = 5
 var health: int
 var invincible: bool = false
+ 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var hud: CanvasLayer
 var health_bar: ProgressBar
@@ -19,6 +21,8 @@ var pickup_timer: Timer
 var shop_ui_scene: PackedScene = preload("res://common/shop/shop_ui.tscn")
 var shop_ui: CanvasLayer = null
 var shop_open: bool = false
+
+var is_hurt: bool = false
 
 func _ready():
 	add_to_group("player")
@@ -104,6 +108,23 @@ func _physics_process(delta: float) -> void:
 			has_double_jumped = true
 
 	var direction := Input.get_axis("ui_left", "ui_right")
+	
+	#flip character
+	if direction > 0:
+		animated_sprite_2d.flip_h = false
+	elif direction < 0:
+		animated_sprite_2d.flip_h = true 
+	
+	#play animations
+	if not is_hurt:
+		if is_on_floor():
+			if direction == 0:
+				animated_sprite_2d.play("idle")
+			else:
+				animated_sprite_2d.play("run") 
+		else:
+			animated_sprite_2d.play("fall")
+	
 	if direction:
 		velocity.x = direction * speed
 	else:
@@ -131,19 +152,29 @@ func _physics_process(delta: float) -> void:
 func take_damage(amount: int):
 	if invincible:
 		return
+	
 	health -= amount
 	health_bar.value = health
 	if health <= 0:
 		die()
 		return
 	invincible = true
+	#play hurt animatoin
+	is_hurt = true
+	animated_sprite_2d.play("hurt")
+	await get_tree().create_timer(0.3).timeout
+	is_hurt = false
+	
 	await get_tree().create_timer(1.0).timeout
 	invincible = false
 
 func die():
 	set_physics_process(false)
 	set_process_input(false)
-
+	#play die animation
+	animated_sprite_2d.play("die")
+	await get_tree().create_timer(2.5).timeout
+	
 	var overlay = ColorRect.new()
 	overlay.color = Color(0, 0, 0, 0.6)
 	overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -156,3 +187,7 @@ func die():
 	label.set_anchors_preset(Control.PRESET_FULL_RECT)
 	label.add_theme_font_size_override("font_size", 48)
 	hud.add_child(label)
+	
+	await get_tree().create_timer(2.5).timeout
+	
+	get_tree().change_scene_to_file("res://common/main_menu/main_menu.tscn")

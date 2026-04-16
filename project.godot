@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="delving-2d-game"
-run/main_scene="uid://0c84qyl0k7ji"
+run/main_scene="uid://crucokus4a5u8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

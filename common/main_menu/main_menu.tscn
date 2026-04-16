@@ -1,0 +1,368 @@
+[gd_scene format=3 uid="uid://crucokus4a5u8"]
+
+[ext_resource type="Texture2D" uid="uid://c5etsqihgxapl" path="res://common/main_menu/main_menu_background.png" id="1_867bj"]
+[ext_resource type="Script" uid="uid://b76sf8qnfyv5" path="res://common/main_menu/main_menu.gd" id="1_j1pve"]
+[ext_resource type="FontFile" uid="uid://dbodngyuqeqqq" path="res://common/main_menu/DungeonFont.ttf" id="2_j1pve"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1pve"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_867bj"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7tm2"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.47058824, 0.47058824, 0.47058824, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3ck0"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3nwh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_b3nwh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Start:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Option:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Exit:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BackgroundWrapper/Background:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.31431612, 0.31431612, 0.31431603, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BackgroundWrapper:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j1pve"]
+resource_name = "main_intro"
+length = 2.0
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Start:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Option:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.9, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenuHolder/MainPanel/MainMargin/MainVBox/Exit:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.9, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_421h1"]
+resource_name = "start_animation"
+length = 2.6
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundWrapper/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.31431612, 0.31431612, 0.31431603, 1), Color(0.8646751, 0.86467516, 0.8646751, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundWrapper:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackgroundWrapper/Background:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.1, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.31431612, 0.31431612, 0.31431603, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3nwh"]
+_data = {
+&"RESET": SubResource("Animation_b3nwh"),
+&"main_intro": SubResource("Animation_j1pve"),
+&"start_animation": SubResource("Animation_421h1")
+}
+
+[node name="MainMenu" type="Control" unique_id=1787426866]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1pve")
+
+[node name="BackgroundWrapper" type="Control" parent="." unique_id=1586295211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(600, 300)
+
+[node name="Background" type="TextureRect" parent="BackgroundWrapper" unique_id=1426560249]
+modulate = Color(0.31431612, 0.31431612, 0.31431603, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_867bj")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MainMenuHolder" type="CenterContainer" parent="." unique_id=705114378]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="PanelContainer" parent="MainMenuHolder" unique_id=253158473]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1pve")
+
+[node name="MainMargin" type="MarginContainer" parent="MainMenuHolder/MainPanel" unique_id=525946243]
+layout_mode = 2
+
+[node name="MainVBox" type="VBoxContainer" parent="MainMenuHolder/MainPanel/MainMargin" unique_id=1145346464]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MainMenuHolder/MainPanel/MainMargin/MainVBox" unique_id=1596688274]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j1pve")
+theme_override_font_sizes/font_size = 70
+text = "Delvin' Deep"
+horizontal_alignment = 1
+
+[node name="TitleSpacer" type="Control" parent="MainMenuHolder/MainPanel/MainMargin/MainVBox" unique_id=1858252973]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MainMenuHolder/MainPanel/MainMargin/MainVBox" unique_id=1875661863]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_867bj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o7tm2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o3ck0")
+text = "START"
+
+[node name="Option" type="Button" parent="MainMenuHolder/MainPanel/MainMargin/MainVBox" unique_id=1391100101]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_867bj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o7tm2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o3ck0")
+text = "OPTIONS"
+
+[node name="Exit" type="Button" parent="MainMenuHolder/MainPanel/MainMargin/MainVBox" unique_id=1387879689]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_867bj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o7tm2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o3ck0")
+text = "EXIT
+"
+
+[node name="OptionsHolder" type="CenterContainer" parent="." unique_id=185634702]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsPanel" type="PanelContainer" parent="OptionsHolder" unique_id=1519961766]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b3nwh")
+
+[node name="OptionsMargin" type="MarginContainer" parent="OptionsHolder/OptionsPanel" unique_id=386342471]
+layout_mode = 2
+
+[node name="OptionsVBox" type="VBoxContainer" parent="OptionsHolder/OptionsPanel/OptionsMargin" unique_id=591153970]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="OptionsTitle" type="Label" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1222443951]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j1pve")
+theme_override_font_sizes/font_size = 70
+text = "Options"
+horizontal_alignment = 1
+
+[node name="OptionsSpacer" type="Control" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1152082419]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Sound" type="Label" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=565838648]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Sound"
+horizontal_alignment = 1
+
+[node name="SoundSlider" type="HSlider" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=758503188]
+layout_mode = 2
+value = 100.0
+
+[node name="OptionsSpacer2" type="Control" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1995312850]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Back" type="Button" parent="OptionsHolder/OptionsPanel/OptionsMargin/OptionsVBox" unique_id=671925830]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_867bj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o7tm2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o3ck0")
+text = "BACK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1049919495]
+libraries/ = SubResource("AnimationLibrary_b3nwh")
+autoplay = &"main_intro"
