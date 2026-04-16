@@ -9,16 +9,27 @@ extends Node2D
 @export var block_break_states: int = 3
 
 @export_category("Mining Properties")
+@export var pickaxe_sprite: Sprite2D
+@export var pickaxe_animation_speed: float = 2
 @export var mine_range: float = 20
 @export var mine_damage_per_second: float = 100
 
 var cell_healths: Dictionary[Vector2i, float]
+var pickaxe_animation_progress: float = 0.0
+
+func _ready() -> void:
+	pickaxe_sprite.visible = false
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("mine"):
 		mine(delta)
+	if Input.is_action_just_released("mine"):
+		pickaxe_sprite.visible = false
 
 func mine(delta: float) -> void:
+	pickaxe_sprite.visible = true
+	pickaxe_animation_progress = fposmod(pickaxe_animation_progress + delta * pickaxe_animation_speed, 1)
+	pickaxe_sprite.rotation_degrees = lerpf(-90, 90, pickaxe_animation_progress)
 	if player.global_position.distance_to(get_global_mouse_position()) > mine_range:
 		return
 	var cell_position: Vector2i = world_tilemap.local_to_map(world_tilemap.to_local(get_global_mouse_position()))
