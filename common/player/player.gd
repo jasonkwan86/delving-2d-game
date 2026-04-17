@@ -73,6 +73,7 @@ func _setup_shop():
 	shop_ui = shop_ui_scene.instantiate()
 	add_child(shop_ui)
 	shop_ui.visible = false
+	shop_ui.shop_closed.connect(func(): shop_open = false)
 
 func _show_pickup_message(text: String) -> void:
 	pickup_label.text = text
@@ -83,13 +84,20 @@ func apply_upgrades() -> void:
 	speed = BOOSTED_SPEED if GameState.has_speed_boost else BASE_SPEED
 	can_double_jump = GameState.has_double_jump
 
+func toggle_shop_ui() -> void:
+	shop_open = not shop_open
+	if shop_open:
+		shop_ui.open()
+	else:
+		shop_ui.close()
+
+func force_close_shop() -> void:
+	shop_open = false
+	shop_ui.close()
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and GameState.shop_unlocked:
-		shop_open = not shop_open
-		if shop_open:
-			shop_ui.open()
-		else:
-			shop_ui.close()
+		toggle_shop_ui()
 
 func _physics_process(delta: float) -> void:
 	if shop_open:

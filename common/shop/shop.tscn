@@ -1,7 +1,6 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://common/shop/shop.gd" id="1_shop"]
-[ext_resource type="PackedScene" path="res://common/shop/shop_ui.tscn" id="2_ui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_zone"]
 size = Vector2(48, 48)
@@ -75,5 +74,3 @@ grow_vertical = 2
 text = "Press E to open shop"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ShopUI" parent="." instance=ExtResource("2_ui")]

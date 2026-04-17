@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal shop_closed
+
 @onready var gem_count_label: Label = $Panel/VBox/GemCountLabel
 @onready var speed_button: Button = $Panel/VBox/SpeedButton
 @onready var double_jump_button: Button = $Panel/VBox/DoubleJumpButton
@@ -24,7 +26,10 @@ func open() -> void:
 	_refresh()
 
 func close() -> void:
+	if not visible:
+		return
 	visible = false
+	shop_closed.emit()
 
 func _on_gems_changed(_new_amount: int) -> void:
 	if visible:
