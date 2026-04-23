@@ -37,6 +37,8 @@ func mine(delta: float) -> void:
 		return
 	
 	var tile_data = world_tilemap.get_cell_tile_data(cell_position)
+	if tile_data.get_custom_data("is_breakable") as bool == false:
+		return
 	var max_health = tile_data.get_custom_data("health")
 	if cell_position not in cell_healths:
 		cell_healths[cell_position] = max_health
