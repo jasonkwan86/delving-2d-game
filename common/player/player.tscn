@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://btxhrqkgnotr3" path="res://common/player/player_sprites/male_hero-fall.png" id="3_40njg"]
 [ext_resource type="Texture2D" uid="uid://bcyl2pdlenbod" path="res://common/player/player_sprites/male_hero-run.png" id="4_40njg"]
 [ext_resource type="Texture2D" uid="uid://biy6g3fxwp4yd" path="res://common/player/player_sprites/male_hero-hurt.png" id="4_dg8k7"]
+[ext_resource type="Script" uid="uid://beonw6bqb3yxv" path="res://common/player/mining_component/mining_component.gd" id="7_uqyw5"]
+[ext_resource type="Script" uid="uid://dphgb85wjttdy" path="res://common/player/inventory_component/inventory_component.gd" id="8_6vwog"]
+[ext_resource type="Texture2D" uid="uid://c6dtybxq5n4qw" path="res://common/player/mining_component/pickaxe.png" id="9_w3sq2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dg8k7"]
 radius = 4.0429144
@@ -433,4 +436,20 @@ position = Vector2(2, 2)
 scale = Vector2(0.41071427, 0.41071427)
 sprite_frames = SubResource("SpriteFrames_x7hfa")
 animation = &"hurt"
-frame_progress = 0.8870921
+
+[node name="MiningComponent" type="Node2D" parent="." unique_id=1900643342 node_paths=PackedStringArray("player", "inventory", "pickaxe_sprite")]
+script = ExtResource("7_uqyw5")
+player = NodePath("..")
+inventory = NodePath("../InventoryComponent")
+pickaxe_sprite = NodePath("../PickaxeSprite")
+metadata/_custom_type_script = "uid://beonw6bqb3yxv"
+
+[node name="InventoryComponent" type="Node" parent="." unique_id=1740202964]
+script = ExtResource("8_6vwog")
+metadata/_custom_type_script = "uid://dphgb85wjttdy"
+
+[node name="PickaxeSprite" type="Sprite2D" parent="." unique_id=960236511]
+position = Vector2(4, 4)
+scale = Vector2(-1, 1)
+texture = ExtResource("9_w3sq2")
+offset = Vector2(4, -4)

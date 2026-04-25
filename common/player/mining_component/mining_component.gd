@@ -29,7 +29,14 @@ func _process(delta: float) -> void:
 func mine(delta: float) -> void:
 	pickaxe_sprite.visible = true
 	pickaxe_animation_progress = fposmod(pickaxe_animation_progress + delta * pickaxe_animation_speed, 1)
-	pickaxe_sprite.rotation_degrees = lerpf(-90, 90, pickaxe_animation_progress)
+	
+	if get_local_mouse_position().x > 0:
+		pickaxe_sprite.rotation_degrees = lerpf(-90, 90, pickaxe_animation_progress)
+		pickaxe_sprite.scale.x = 1
+	else:
+		pickaxe_sprite.rotation_degrees = lerpf(90, -90, pickaxe_animation_progress)
+		pickaxe_sprite.scale.x = -1
+		
 	if player.global_position.distance_to(get_global_mouse_position()) > mine_range:
 		return
 	var cell_position: Vector2i = world_tilemap.local_to_map(world_tilemap.to_local(get_global_mouse_position()))
