@@ -136,7 +136,7 @@ position = Vector2(672.99994, 548)
 [node name="Player" parent="." unique_id=1996790677 instance=ExtResource("2_kdh4p")]
 position = Vector2(270, 423)
 
-[node name="MiningComponent" parent="Player" index="4" unique_id=1280949579 node_paths=PackedStringArray("world_tilemap", "break_tilemap")]
+[node name="MiningComponent" parent="Player" index="4" unique_id=1900643342 node_paths=PackedStringArray("world_tilemap", "break_tilemap")]
 world_tilemap = NodePath("../../WorldLayer")
 break_tilemap = NodePath("../../BreakLayer")
 
@@ -175,4 +175,6 @@ position = Vector2(771, 538)
 position = Vector2(530, 750)
 
 [node name="EnemyFinal" parent="." unique_id=1545020129 instance=ExtResource("15_p7ycy")]
-position = Vector2(341, 398)
+position = Vector2(620, 2150)
+
+[editable path="Player"]

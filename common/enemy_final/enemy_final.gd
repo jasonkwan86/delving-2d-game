@@ -105,9 +105,13 @@ func die():
 
 
 func _on_head_hit_box_body_entered(body: Node2D) -> void:
+	print("player hits the enemy!")
 	if is_dead:
+		print("is dead. returning!")
 		return
 	if body.is_in_group("player"):
-		if body.velocity.y > 0:
+		print("body is in group player. ")
+		print(body.velocity.y)
+		if body.velocity.y >= 0:
 			take_damage(1)
 			body.velocity.y = -300

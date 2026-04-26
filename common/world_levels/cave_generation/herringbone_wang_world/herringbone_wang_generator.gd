@@ -6,14 +6,14 @@ extends TileMapLayer
 
 func _ready():
 	randomize()
-	generate_herringbone_map(Vector2i(-5, 5), Vector2i(20, 12))
+	generate_herringbone_map(Vector2i(-5, 5), Vector2i(20, 8))
 
 #func _input(event):
 	#if event.is_action_pressed("ui_accept"):
 		#get_tree().reload_current_scene()
 
 func generate_boss_arena() -> void:
-	herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2i(0, -2), Vector2i(3, 13), world_tilemap)
+	herringbone_wang_data_set.copy_hbwt_horizontal_to_tile_map_layer(Vector2i(0, -2), Vector2i(3, 9), world_tilemap)
 
 func generate_world_borders(offset: Vector2i, dimensions: Vector2i) -> void:
 	for row in dimensions.y:

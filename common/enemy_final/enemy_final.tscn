@@ -146,6 +146,7 @@ animation = &"walk"
 shape = SubResource("RectangleShape2D_qgo2n")
 
 [node name="HeadHitBox" type="Area2D" parent="." unique_id=211957364]
+position = Vector2(0, -5)
 collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadHitBox" unique_id=1979060789]
