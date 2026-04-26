@@ -175,6 +175,6 @@ position = Vector2(771, 538)
 position = Vector2(530, 750)
 
 [node name="EnemyFinal" parent="." unique_id=1545020129 instance=ExtResource("15_p7ycy")]
-position = Vector2(620, 2150)
+position = Vector2(620, 1562)
 
 [editable path="Player"]
