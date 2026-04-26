@@ -101,8 +101,7 @@ func die():
 	#set_physics_process(false)
 	anim.play("death")
 	await anim.animation_finished
-	queue_free()
-
+	get_tree().change_scene_to_file("res://common/on_win_menu/on_win_menu.tscn")
 
 func _on_head_hit_box_body_entered(body: Node2D) -> void:
 	if is_dead:

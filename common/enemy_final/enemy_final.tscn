@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ub4uv")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -140,7 +140,7 @@ script = ExtResource("1_spvse")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=904587927]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_3xq0i")
-animation = &"walk"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1387795286]
 shape = SubResource("RectangleShape2D_qgo2n")
